@@ -242,7 +242,7 @@ export default function Navbar({ picturePath, userId }) {
               >
                 <Avatar
                   alt="Sharp"
-                  src={`http://localhost:5001/assets/${picturePath}`}
+                  src={`https://social-app-api-q1h4.onrender.com/assets/${picturePath}`}
                 />
               </IconButton>
             </Tooltip>

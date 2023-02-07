@@ -25,7 +25,7 @@ const FriendList = ({ userId }) => {
   // Fetching getFriends data from server_side
   const getFriends = async () => {
     const response = await fetch(
-      `http://localhost:5001/users/${userId}/friends`,
+      `https://social-app-api-q1h4.onrender.com/users/${userId}/friends`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
@@ -69,7 +69,7 @@ const FriendList = ({ userId }) => {
                 width="200"
                 height="150"
                 alt="advert"
-                src="http://localhost:5001/assets/no-friends.jpg"
+                src="https://social-app-api-q1h4.onrender.com/assets/no-friends.jpg"
                 style={{ borderRadius: "0.75rem", margin: "0.75rem 0" }}
               />
             </Box>

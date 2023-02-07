@@ -10,10 +10,13 @@ const PostsWidget = ({ userId, isProfile = false }) => {
 
   // Fetching the data from server_side using Fetch Method
   const getPosts = async () => {
-    const response = await fetch("http://localhost:5001/posts", {
-      method: "GET",
-      headers: { Authorization: `Bearer ${token}` },
-    });
+    const response = await fetch(
+      "https://social-app-api-q1h4.onrender.com/posts",
+      {
+        method: "GET",
+        headers: { Authorization: `Bearer ${token}` },
+      }
+    );
     const data = await response.json();
     dispatch(setPosts({ posts: data }));
   };
@@ -21,7 +24,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
   // Fetching the data from server_side using Fetch Method
   const getUserPosts = async () => {
     const response = await fetch(
-      `http://localhost:5001/posts/${userId}/posts`,
+      `https://social-app-api-q1h4.onrender.com/${userId}/posts`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },

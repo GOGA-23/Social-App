@@ -29,10 +29,13 @@ const UserWidget = ({ userId }) => {
 
   // Fetching getUser data from server_side
   const getUser = async () => {
-    const response = await fetch(`http://localhost:5001/users/${userId}`, {
-      method: "GET",
-      headers: { Authorization: `Bearer ${token}` },
-    });
+    const response = await fetch(
+      `https://social-app-api-q1h4.onrender.com/users/${userId}`,
+      {
+        method: "GET",
+        headers: { Authorization: `Bearer ${token}` },
+      }
+    );
     const data = await response.json();
     setUser(data);
   };
@@ -75,7 +78,7 @@ const UserWidget = ({ userId }) => {
             <ListItemAvatar>
               <Avatar
                 alt="User Image"
-                src={`http://localhost:5001/assets/${picturePath}`}
+                src={`https://social-app-api-q1h4.onrender.com/assets/${picturePath}`}
                 sx={{ width: 56, height: 56, mr: 2 }}
               />
             </ListItemAvatar>

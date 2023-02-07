@@ -43,11 +43,14 @@ const MyPost = ({ picturePath }) => {
     }
 
     // Fetching the data from server_side using Fetch Method
-    const response = await fetch(`http://localhost:5001/posts`, {
-      method: "POST",
-      headers: { Authorization: `Bearer ${token}` },
-      body: formData,
-    });
+    const response = await fetch(
+      `https://social-app-api-q1h4.onrender.com/posts`,
+      {
+        method: "POST",
+        headers: { Authorization: `Bearer ${token}` },
+        body: formData,
+      }
+    );
     const posts = await response.json();
     dispatch(setPosts({ posts }));
     setImage(null);
@@ -59,7 +62,7 @@ const MyPost = ({ picturePath }) => {
         <FlexBox gap="1.2rem">
           <Avatar
             alt="User Image"
-            src={`http://localhost:5001/assets/${picturePath}`}
+            src={`https://social-app-api-q1h4.onrender.com/assets/${picturePath}`}
             sx={{ width: 56, height: 56 }}
           />
 

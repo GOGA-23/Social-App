@@ -57,14 +57,17 @@ export default function PostWidget({
 
   // Fetching the data from server_side using Fetch Method
   const patchLike = async () => {
-    const response = await fetch(`http://localhost:5001/posts/${postId}/like`, {
-      method: "PATCH",
-      headers: {
-        Authorization: `Bearer ${token}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ userId: loggedInUserId }),
-    });
+    const response = await fetch(
+      `https://social-app-api-q1h4.onrender.com/posts/${postId}/like`,
+      {
+        method: "PATCH",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ userId: loggedInUserId }),
+      }
+    );
     const updatedPost = await response.json();
     console.log(updatedPost);
     dispatch(setPost({ post: updatedPost }));
@@ -88,7 +91,7 @@ export default function PostWidget({
         <CardMedia
           component="img"
           height="500"
-          image={`http://localhost:5001/assets/${picturePath}`}
+          image={`https://social-app-api-q1h4.onrender.com/assets/${picturePath}`}
           alt="Post Image"
           sx={{
             p: 2,

@@ -26,7 +26,7 @@ export default function Friend({ friendId, name, subtitle, userPicturePath }) {
   // Fetching data for patch friend from server side using fetch method
   const patchFriend = async () => {
     const response = await fetch(
-      `http://localhost:5001/users/${_id}/${friendId}`,
+      `https://social-app-api-q1h4.onrender.com/${_id}/${friendId}`,
       {
         method: "PATCH",
         headers: {
