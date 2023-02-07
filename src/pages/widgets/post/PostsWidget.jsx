@@ -11,7 +11,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
   // Fetching the data from server_side using Fetch Method
   const getPosts = async () => {
     const response = await fetch(
-      "https://social-app-api-q1h4.onrender.com/posts",
+      "https://mern-social-app-api-wza1.onrender.com/posts",
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
@@ -24,7 +24,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
   // Fetching the data from server_side using Fetch Method
   const getUserPosts = async () => {
     const response = await fetch(
-      `https://social-app-api-q1h4.onrender.com/${userId}/posts`,
+      `https://mern-social-app-api-wza1.onrender.com/${userId}/posts`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },

@@ -58,7 +58,7 @@ export default function PostWidget({
   // Fetching the data from server_side using Fetch Method
   const patchLike = async () => {
     const response = await fetch(
-      `https://social-app-api-q1h4.onrender.com/posts/${postId}/like`,
+      `https://mern-social-app-api-wza1.onrender.com/posts/${postId}/like`,
       {
         method: "PATCH",
         headers: {
@@ -91,7 +91,7 @@ export default function PostWidget({
         <CardMedia
           component="img"
           height="500"
-          image={`https://social-app-api-q1h4.onrender.com/assets/${picturePath}`}
+          image={`https://mern-social-app-api-wza1.onrender.com/assets/${picturePath}`}
           alt="Post Image"
           sx={{
             p: 2,

@@ -26,7 +26,7 @@ export default function Friend({ friendId, name, subtitle, userPicturePath }) {
   // Fetching data for patch friend from server side using fetch method
   const patchFriend = async () => {
     const response = await fetch(
-      `https://social-app-api-q1h4.onrender.com/${_id}/${friendId}`,
+      `https://mern-social-app-api-wza1.onrender.com/${_id}/${friendId}`,
       {
         method: "PATCH",
         headers: {
@@ -59,7 +59,7 @@ export default function Friend({ friendId, name, subtitle, userPicturePath }) {
         <ListItemAvatar>
           <Avatar
             alt="User Image"
-            src={`https://social-app-api-q1h4.onrender.com/assets/${userPicturePath}`}
+            src={`https://mern-social-app-api-wza1.onrender.com/assets/${userPicturePath}`}
             sx={{ width: 40, height: 40 }}
           />
         </ListItemAvatar>

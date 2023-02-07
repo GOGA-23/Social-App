@@ -171,7 +171,7 @@ export default function Navbar({ picturePath, userId }) {
         >
           <Avatar
             alt="User Image"
-            src={`https://social-app-api-q1h4.onrender.com/assets/${picturePath}`}
+            src={`https://mern-social-app-api-wza1.onrender.com/assets/${picturePath}`}
           />
         </IconButton>
         <p>Profile</p>
@@ -245,7 +245,7 @@ export default function Navbar({ picturePath, userId }) {
               >
                 <Avatar
                   alt="User Image"
-                  src={`https://social-app-api-q1h4.onrender.com/assets/${picturePath}`}
+                  src={`https://mern-social-app-api-wza1.onrender.com/assets/${picturePath}`}
                 />
               </IconButton>
             </Tooltip>
