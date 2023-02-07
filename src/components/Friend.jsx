@@ -59,7 +59,7 @@ export default function Friend({ friendId, name, subtitle, userPicturePath }) {
         <ListItemAvatar>
           <Avatar
             alt="User Image"
-            src={`http://localhost:5001/assets/${userPicturePath}`}
+            src={`https://social-app-api-q1h4.onrender.com/assets/${userPicturePath}`}
             sx={{ width: 40, height: 40 }}
           />
         </ListItemAvatar>

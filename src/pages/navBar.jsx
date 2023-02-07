@@ -169,7 +169,10 @@ export default function Navbar({ picturePath, userId }) {
           aria-haspopup="true"
           color="inherit"
         >
-          <Avatar alt="Sharp" src="/static/images/avatar/2.jpg" />
+          <Avatar
+            alt="User Image"
+            src={`https://social-app-api-q1h4.onrender.com/assets/${picturePath}`}
+          />
         </IconButton>
         <p>Profile</p>
       </MenuItem>
@@ -241,7 +244,7 @@ export default function Navbar({ picturePath, userId }) {
                 color="inherit"
               >
                 <Avatar
-                  alt="Sharp"
+                  alt="User Image"
                   src={`https://social-app-api-q1h4.onrender.com/assets/${picturePath}`}
                 />
               </IconButton>
