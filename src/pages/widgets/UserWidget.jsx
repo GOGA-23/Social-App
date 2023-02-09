@@ -30,7 +30,7 @@ const UserWidget = ({ userId }) => {
   // Fetching getUser data from server_side
   const getUser = async () => {
     const response = await fetch(
-      `https://mern-social-app-api-wza1.onrender.com/users/${userId}`,
+      `${process.env.REACT_APP_SERVER_URL}/users/${userId}`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
@@ -78,7 +78,7 @@ const UserWidget = ({ userId }) => {
             <ListItemAvatar>
               <Avatar
                 alt="User Image"
-                src={`https://mern-social-app-api-wza1.onrender.com/assets/${picturePath}`}
+                src={`${process.env.REACT_APP_SERVER_URL}/assets/${picturePath}`}
                 sx={{ width: 56, height: 56, mr: 2 }}
               />
             </ListItemAvatar>

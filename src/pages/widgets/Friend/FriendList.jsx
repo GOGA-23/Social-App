@@ -25,14 +25,13 @@ const FriendList = ({ userId }) => {
   // Fetching getFriends data from server_side
   const getFriends = async () => {
     const response = await fetch(
-      `https://mern-social-app-api-wza1.onrender.com/users/${userId}/friends`,
+      `${process.env.REACT_APP_SERVER_URL}/users/${userId}/friends`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
       }
     );
     const data = await response.json();
-
     dispatch(setFriends({ friends: data }));
   };
 
@@ -69,7 +68,7 @@ const FriendList = ({ userId }) => {
                 width="200"
                 height="150"
                 alt="advert"
-                src="https://mern-social-app-api-wza1.onrender.com/assets/no-friends.jpg"
+                src={`${process.env.REACT_APP_SERVER_URL}/assets/no-friends.jpg`}
                 style={{ borderRadius: "0.75rem", margin: "0.75rem 0" }}
               />
             </Box>

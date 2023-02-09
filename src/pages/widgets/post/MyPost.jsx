@@ -43,14 +43,11 @@ const MyPost = ({ picturePath }) => {
     }
 
     // Fetching the data from server_side using Fetch Method
-    const response = await fetch(
-      "https://mern-social-app-api-wza1.onrender.com/posts",
-      {
-        method: "POST",
-        headers: { Authorization: `Bearer ${token}` },
-        body: formData,
-      }
-    );
+    const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/posts`, {
+      method: "POST",
+      headers: { Authorization: `Bearer ${token}` },
+      body: formData,
+    });
     const posts = await response.json();
     dispatch(setPosts({ posts }));
     setImage(null);
@@ -62,7 +59,7 @@ const MyPost = ({ picturePath }) => {
         <FlexBox gap="1.2rem">
           <Avatar
             alt="User Image"
-            src={`https://mern-social-app-api-wza1.onrender.com/assets/${picturePath}`}
+            src={`${process.env.REACT_APP_SERVER_URL}/assets/${picturePath}`}
             sx={{ width: 56, height: 56 }}
           />
 

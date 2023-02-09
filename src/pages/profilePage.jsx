@@ -16,7 +16,7 @@ export const ProfilePage = () => {
 
   const getUser = async () => {
     const response = await fetch(
-      `https://mern-social-app-api-wza1.onrender.com/users/${userId}`,
+      `${process.env.REACT_APP_SERVER_URL}/users/${userId}`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },

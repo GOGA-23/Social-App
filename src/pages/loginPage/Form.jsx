@@ -45,7 +45,7 @@ const Form = () => {
   /* Login page */
   const login = async (values, onSubmitProps) => {
     const loggedInResponse = await fetch(
-      "https://mern-social-app-api-wza1.onrender.com/auth/login",
+      `${process.env.REACT_APP_SERVER_URL}/auth/login`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -78,7 +78,7 @@ const Form = () => {
 
     // send req to back-end to post the data and get res from back-end
     const savedUserResponse = await fetch(
-      "https://mern-social-app-api-wza1.onrender.com/auth/register",
+      `${process.env.REACT_APP_SERVER_URL}/auth/register`,
       {
         method: "POST",
         body: formData,
