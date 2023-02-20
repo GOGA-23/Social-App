@@ -108,7 +108,7 @@ const UserWidget = ({ userId }) => {
           </ListItem>
           <Divider />
           <ListItem secondaryAction={<ListItemText primary={viewedProfile} />}>
-            <ListItemText primary="Who's viewed your profile" />
+            <ListItemText primary=" viewed your profile" />
           </ListItem>
           <Divider />
           <ListItem>
